@@ -25,7 +25,7 @@ module seq_top #(
     input               rst_ni,
 
     input  [WidthA-1:0] a,
-    input  [WidthA-1:0] b,
+    input  [WidthB-1:0] b,
     input               start,
 
     output [WidthC-1:0] c,
