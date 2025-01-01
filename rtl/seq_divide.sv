@@ -1,4 +1,15 @@
-// a = b*q + r
+// -----------------------------------------------------------------------------
+// File Name: seq_divide.sv
+// Description:
+//     This module implements a sequential divider that computes the quotient
+//     and remainder of two integres. The division process takes (WidthB+1)
+//     clock cycles and uses a subtract-and-shift algorithm, where WidthB
+//     represents the bit width of the divisor.
+//
+// Author: shsjung (github.com/shsjung)
+// Date Created: 01-01-2025
+// -----------------------------------------------------------------------------
+
 module seq_divide #(
     parameter  int WidthA   = 32,
     parameter  int WidthB   = 32,

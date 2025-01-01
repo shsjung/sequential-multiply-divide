@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// File Name: seq_top.sv
+// Description:
+//     A module which includes the following components:
+//       1. A sequential multiplier
+//       2. A sequential divider
+//     This module has two inputs:
+//       1. a: multiplicand / dividend
+//       2. b: multiplier / divisor
+//     This module has three outputs:
+//       1. c: product
+//       2. q: quotient
+//       3. r: remainder
+//
+// Author: shsjung (github.com/shsjung)
+// Date Created: 01-01-2025
+// -----------------------------------------------------------------------------
+
 module seq_top #(
     parameter  int WidthA = 32,
     parameter  int WidthB = 32,

@@ -1,4 +1,15 @@
-// c = a*b
+// -----------------------------------------------------------------------------
+// File Name: seq_multiply.sv
+// Description:
+//     This module implements a sequential multiplier that computes the product
+//     of two integers. The multiplication process takes WidthB clock cycles
+//     and uses a shift-and-add algorithm, where WidthB represents the bit
+//     width of the multiplier.
+//
+// Author: shsjung (github.com/shsjung)
+// Date Created: 01-01-2025
+// -----------------------------------------------------------------------------
+
 module seq_multiply #(
     parameter  int WidthA   = 32,
     parameter  int WidthB   = 32,
