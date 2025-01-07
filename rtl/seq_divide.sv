@@ -10,6 +10,8 @@
 // Date Created: 01-01-2025
 // -----------------------------------------------------------------------------
 
+`define SIM_LOG
+
 module seq_divide #(
     parameter  int WidthA   = 32,
     parameter  int WidthB   = 32,
@@ -61,5 +63,16 @@ module seq_divide #(
     assign q_o = result[WidthA-1:0];
     assign r_o = result[WidthP-1:WidthA];
     assign finish_o = ~|cnt;
+
+`ifdef SIM_LOG
+    always_ff @(posedge start_i) begin
+        if (start_i)
+            $display("seq_divide   start : 0x%x 0x%x", a_i, b_i);
+    end
+    always_ff @(posedge finish_o) begin
+        if (finish_o)
+            $display("seq_divide   finish: 0x%x 0x%x", q_o, r_o);
+    end
+`endif
 
 endmodule

@@ -10,6 +10,8 @@
 // Date Created: 01-01-2025
 // -----------------------------------------------------------------------------
 
+`define SIM_LOG
+
 module seq_multiply #(
     parameter  int WidthA   = 32,
     parameter  int WidthB   = 32,
@@ -59,5 +61,16 @@ module seq_multiply #(
 
     assign c_o = result;
     assign finish_o = ~|cnt;
+
+`ifdef SIM_LOG
+    always_ff @(posedge start_i) begin
+        if (start_i)
+            $display("seq_multiply start : %d %d", a_i, b_i);
+    end
+    always_ff @(posedge finish_o) begin
+        if (finish_o)
+            $display("seq_multiply finish: %d", c_o);
+    end
+`endif
 
 endmodule
