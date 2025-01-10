@@ -37,13 +37,13 @@ Below are example waveforms of the sequential multiplier and the sequential divi
 
 1. Sequential Multiply
 
-   ![Sequential Multiplier](https://svg.wavedrom.com/github/shsjung/sequential-multiply-divide/main/wavedrom/seq_multiplier_0.json)
+   ![Sequential Multiplier](https://svg.wavedrom.com/github/shsjung/sequential-multiply-divide/main/wavedrom/seq_multiplier_1.json)
 
    - The multiplier completes its operation in `WidthB`+1 clock cycles, which is 33 in this case.
 
 2. Sequential Divide
 
-   ![Sequential Divider](https://svg.wavedrom.com/github/shsjung/sequential-multiply-divide/main/wavedrom/seq_divider_0.json)
+   ![Sequential Divider](https://svg.wavedrom.com/github/shsjung/sequential-multiply-divide/main/wavedrom/seq_divider_1.json)
 
    - The divider completes its operation in `WidthB`+2 clock cycles, which is 34 in this case.
 
