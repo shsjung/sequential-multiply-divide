@@ -1,0 +1,14 @@
+{signal: [
+  {name: 'clk_i',    wave: 'p.....|....'},
+  {name: 'start_i',  wave: '010...|....', node: '.A'},
+  {name: 'a_i',      wave: 'x3....|..x.', data:[15]},
+  {name: 'b_i',      wave: 'x4....|..x.', data:[13]},
+  {name: 'cnt',      wave: '2.2222|222.', data:[0,33,32,31,,2,1,0]},
+  {name: 'finish_o', wave: '1.0...|..1.', node: '.........B', data: ['head', 'body', 'tail', 'data']},
+  {name: 'q_o',      wave: 'x.....|..5.', data:[1]},
+  {name: 'r_o',      wave: 'x.....|..6.', data:[2]},
+  {node:'.C.......D'}
+ ],
+ edge:[
+   'A-C','B-D','C<->D 34 clocks'
+ ]
