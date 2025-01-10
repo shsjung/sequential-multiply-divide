@@ -2,7 +2,7 @@
 // File Name: seq_multiply.sv
 // Description:
 //     This module implements a sequential multiplier that computes the product
-//     of two integers. The multiplication process takes WidthB clock cycles
+//     of two integers. The multiplication process takes WidthB+1 clock cycles
 //     and uses a shift-and-add algorithm, where WidthB represents the bit
 //     width of the multiplier.
 //

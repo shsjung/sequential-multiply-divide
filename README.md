@@ -1,11 +1,13 @@
 # Sequential Multiplier and Divider Modules
 
+This project implements a sequential multiplier and divider using SystemVerilog. The sequential multiplier repeatedly shifts and adds partial products, while the sequential divider performs iterative subtraction and shifting to compute the quotient and remainder.
+
 ## File Structure
 
 - `rtl/`
-  - `seq_divide.sv`: Sequential divider
-  - `seq_multiply.sv`: Sequential multiplier
-  - `seq_top.sv`: Top module that instantiates both sequential divider and multiplier modules
+  - `seq_multiply.sv`: Sequential multiplier module
+  - `seq_divide.sv`: Sequential divider module
+  - `seq_top.sv`: Top module that instantiates both multiplier and divider modules
 - `wavedrom/`: Waveform diagrams
 - `obj_dir/`: Directory containing object files and executables generated during Verilator simulation
 - `tb.cpp`: Testbench top-level file
@@ -28,6 +30,22 @@ The provided testbench is designed for simulation using Verilator. Ensure Verila
    ```bash
    make
    ```
+
+## Example Waveforms
+
+Below are example waveforms of the sequential multiplier and the sequential divider.
+
+1. Sequential Multiply
+
+   ![Sequential Multiplier](https://svg.wavedrom.com/github/shsjung/sequential-multiply-divide/main/wavedrom/seq_multiplier_0.json)
+
+   - The multiplier completes its operation in `WidthB`+1 clock cycles, which is 33 in this case.
+
+2. Sequential Divide
+
+   ![Sequential Divider](https://svg.wavedrom.com/github/shsjung/sequential-multiply-divide/main/wavedrom/seq_divider_0.json)
+
+   - The divider completes its operation in `WidthB`+2 clock cycles, which is 34 in this case.
 
 ## License
 

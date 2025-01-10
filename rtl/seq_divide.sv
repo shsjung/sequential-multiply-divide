@@ -2,7 +2,7 @@
 // File Name: seq_divide.sv
 // Description:
 //     This module implements a sequential divider that computes the quotient
-//     and remainder of two integres. The division process takes (WidthB+1)
+//     and remainder of two integers. The division process takes (WidthB+2)
 //     clock cycles and uses a subtract-and-shift algorithm, where WidthB
 //     represents the bit width of the divisor.
 //
@@ -16,7 +16,7 @@ module seq_divide #(
     parameter  int WidthA   = 32,
     parameter  int WidthB   = 32,
     localparam int WidthP   = WidthA + WidthB,
-    localparam int WidthCnt = $clog2(WidthB+1)
+    localparam int WidthCnt = $clog2(WidthB+2)
 ) (
     input               clk_i,
     input               rst_ni,
