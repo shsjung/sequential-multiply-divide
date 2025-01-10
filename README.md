@@ -43,7 +43,7 @@ Below are example waveforms of the sequential multiplier and the sequential divi
 
 2. Sequential Divide
 
-   ![Sequential Divider](/wavedrom/seq_divider/svg)
+   ![Sequential Divider](/wavedrom/seq_divider.svg)
 
    - The divider completes its operation in `WidthB`+2 clock cycles, which is 34 in this case.
 
